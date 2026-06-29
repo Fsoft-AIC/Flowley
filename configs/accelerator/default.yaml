@@ -1,0 +1,4 @@
+device_placement: True
+mixed_precision: bf16
+gradient_accumulation_steps: 1
+log_with: wandb

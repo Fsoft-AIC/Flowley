@@ -1,0 +1,22 @@
+# IO files
+tsv_file: ./dataset/VGGSound/vggsound_full.tsv
+output_dir: ./dataset/VGGSound/memmap_fps8-dim768
+tmp_dir: ./dataset/VGGSound/tmp/
+
+# Features Encoder
+vae_ckpt_path: ./checkpoints/vae/v1-16.pth
+max_len: 77
+
+# Mel Converter
+mode: 16k
+
+# Dataset
+split: valid
+duration_sec: 8.0
+clip_fps: 8
+clip_size: 224
+normalize_audio: True
+
+# Distributed
+batch_size: 16
+num_workers: 4

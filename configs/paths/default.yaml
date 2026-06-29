@@ -1,0 +1,18 @@
+# path to root directory
+# this requires PROJECT_ROOT environment variable to exist
+# you can replace it with "." if you want the root to be the current working directory
+root_dir: ${oc.env:PROJECT_ROOT}
+
+# path to data directory
+data_dir: ${paths.root_dir}/dataset
+
+# path to logging directory
+log_dir: ${paths.root_dir}/logs
+
+# use it to store all ckpts, states, etc.
+checkpoints_dir: ${paths.root_dir}/checkpoints
+
+# path to output video directory
+synthesized_dir: ${paths.root_dir}/outputs
+output_video_dir: ${paths.synthesized_dir}/videos
+output_audio_dir: ${paths.synthesized_dir}/audios

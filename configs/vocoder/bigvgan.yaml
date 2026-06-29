@@ -1,0 +1,1 @@
+ckpt_path: ${paths.checkpoints_dir}/bigvgan/best_netG.pt

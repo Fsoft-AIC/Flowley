@@ -1,0 +1,107 @@
+defaults:
+  - _self_
+  - hydra: default
+  - paths: default
+  - data: vggsound
+  - accelerator: default
+  - vae: 16khz
+  - vocoder: bigvgan
+  - override hydra/job_logging: file_only
+  - override hydra/hydra_logging: default
+
+task_name: "train"
+
+sample_rate: 16000
+
+# Debugging
+debug: False
+n_samples_for_debug: 90000
+
+optim:
+  lr: 1.5e-4
+  weight_decay: 1.0e-6
+  betas: [0.9, 0.95]
+
+scheduler:
+  warmup_steps: 1000
+  type: "step"
+  milestones: [180000, 300000]  # [15000, 25000]
+  gamma: 0.1
+
+model:
+  audio_dim: 20
+  text_dim: 1024
+  video_dim: 768  # 1024
+  hidden_dim: 512
+  audio_seq_len: 250
+  text_seq_len: 77
+  video_fps: 8
+  visual_seq_len: 64  # 32
+  multi_n_layers: 5
+  multi_n_heads: 8
+  single_n_layers: 10
+  single_n_heads: 8
+  single_type: DiTV2
+  balance_hparam: null   # hparam * text + (1 - hparam) * visual
+  mask_window_size: 0  # -1 means no mask.
+  mask_fade: True
+  mask_fade_range: 4
+  mask_fade_type: cosine
+  mlp_ratio: 4.0
+  qk_scale: null
+  attn_dropout: 0.0
+  mlp_dropout: 0.1
+  adaln_init_gaussian: True
+
+flow_matching:
+  loss_type: mse
+  ode_solver: euler
+  noise_scheduler: cosmap
+  num_steps: 25
+  direction_loss_weight: 0.5
+  immiscible: True
+
+disable_wandb: False
+wandb:
+  dir: ${paths.log_dir}
+  id: null  # null
+  group: "fulldata"
+  name: label=vgglabel-balance=${model.balance_hparam}-mask_size=${model.mask_window_size}-mask_fade=${model.mask_fade}-fade_range=${model.mask_fade_range}-fade_type=${model.mask_fade_type}
+
+run_dir: ${hydra:run.dir}
+
+ema:
+  sigma_rels: [0.05, 0.1]
+  update_every: 1
+  checkpoint_every: 5000
+  checkpoint_folder: ${run_dir}/ema_ckpts
+  start: 0
+  default_output_sigma: 0.05
+
+batch_size: 256  # per gpu
+
+num_workers: 32
+
+seed: 42
+
+# Training
+n_epochs: 2000
+use_ema: True
+checkpoint_dir: ${run_dir}/ckpts
+clip_grad_norm: 1.0
+save_ckpt_per_epoch: True
+save_ckpt_every_num_steps: 1000
+
+# Log
+train_log_extra_interval: 2000
+valid_log_extra_interval: 1000
+num_train_log_data: 5
+num_valid_log_data: 5
+
+null_condition_prob: 0.1
+cfg_strength: 7.5
+
+resume_from_ckpt: null
+
+hydra:
+  output_subdir: null

@@ -1,0 +1,11 @@
+train_dataset:
+  tsv_file: ${paths.data_dir}/VGGSound/memmap_fps8-dim768/train.tsv
+  memmap_dir: ${paths.data_dir}/VGGSound/memmap_fps8-dim768/train
+
+valid_dataset:
+  tsv_file: ${paths.data_dir}/VGGSound/memmap_fps8-dim768/valid.tsv
+  memmap_dir: ${paths.data_dir}/VGGSound/memmap_fps8-dim768/valid
+
+test_dataset:
+  tsv_file: ${paths.data_dir}/VGGSound/memmap_fps8-dim768/test.tsv
+  memmap_dir: ${paths.data_dir}/VGGSound/memmap_fps8-dim768/test

@@ -1,0 +1,46 @@
+defaults:
+  - train
+  - _self_
+
+run_dir: null  # have to specify this in the command line
+
+train_cfg_path: ${run_dir}/train_cfg.yaml
+
+hydra:
+  job_logging:
+    handlers:
+      console:
+        class: logging.StreamHandler
+        formatter: simple
+        stream: ext://sys.stdout
+      file:
+        class: logging.FileHandler
+        formatter: simple
+        # absolute file path
+        filename: ${run_dir}/${hydra.job.name}.log
+
+data:
+  test_dataset:
+    tsv_file: ${paths.data_dir}/VGGSound/memmap_fps8-dim768/test.tsv
+    memmap_dir: ${paths.data_dir}/VGGSound/memmap_fps8-dim768/test
+
+# EMA
+min_step_ema: null  # set or default to 0
+max_step_ema: null  # set or default to using every existed ema files
+
+# CFG
+cfg_strength: 7.5
+
+vocode_gt: True
+force_synthesize: False
+
+batch_size: 256
+num_workers: 32
+
+duration: 8.0
+
+num_test_log_data: 2  # set 0 to disable wandb logging
+
+export_with_video: False  # True to merge synthesized audio with video
+
+video_root_dir: ${paths.data_dir}/VGGSound/scratch/shared/beegfs/hchen/train_data/VGGSound_final/video

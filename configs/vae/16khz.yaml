@@ -1,0 +1,2 @@
+vae_ckpt_path: ${paths.checkpoints_dir}/vae/v1-16.pth
+mode: 16k
