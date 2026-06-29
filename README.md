@@ -4,7 +4,7 @@
 
 <a href="https://thanhtvt.github.io/"><strong><u>Thanh V. T. Tran</u></strong><sup>1</sup></a> &nbsp;&nbsp;&nbsp;
 <a href="https://nngocson2002.github.io/"><strong><u>Ngoc-Son Nguyen</u></strong><sup>1</sup></a> &nbsp;&nbsp;&nbsp;
-<a href=""><strong><u>Luong Tran</u></strong><sup>1</sup></a> &nbsp;&nbsp;&nbsp;
+<a href="https://khanhluong34.github.io/"><strong><u>Luong Tran</u></strong><sup>1</sup></a> &nbsp;&nbsp;&nbsp;
 <a href="https://www.linkedin.com/in/long-khanh-pham-5094b923a/"><strong><u>Long-Khanh Pham</u></strong><sup>1</sup></a> &nbsp;&nbsp;&nbsp;
 <a href="https://paarthneekhara.github.io/"><strong><u>Paarth Neekhara</u></strong><sup>2</sup></a> &nbsp;&nbsp;&nbsp;
 <a href="https://shehzeen.github.io/"><strong><u>Shehzeen Hussain
