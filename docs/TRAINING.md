@@ -36,7 +36,7 @@ First, you have to prepare a tsv file containing 3 columns:
 - `split`: split of the file. Either "train", "valid", or "test".
 
 > [!NOTE] 💡
-> Data files for VGGSound and MovieGen Audio Bench are located in the sets directory. The long text descriptions provided there were generated using SoundCap.
+> Data file for VGGSound is located in the [sets](../sets) directory. The long text descriptions provided there were generated using SoundCap.
 
 #### 2. Change configuration file
 
@@ -108,4 +108,4 @@ accelerate launch scripts/train.py
 accelerate launch scripts/train.py batch_size=16 model.single_n_heads=8
 ```
 
-Any outputs from training will be stored in `logs/train/runs/${now:%Y-%m-%d}_${now:%H-%M-%S}`.)(s
+Any outputs from training will be stored in `logs/train/runs/${now:%Y-%m-%d}_${now:%H-%M-%S}`.)(sis.t
