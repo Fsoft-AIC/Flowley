@@ -1,6 +1,6 @@
 # IO files
-tsv_file: ./dataset/VGGSound/vggsound_full.tsv
-output_dir: ./dataset/VGGSound/memmap_fps8-dim768
+tsv_file: ./sets/vggsound.tsv
+output_dir: ./dataset/VGGSound/memmap
 tmp_dir: ./dataset/VGGSound/tmp/
 
 # Features Encoder

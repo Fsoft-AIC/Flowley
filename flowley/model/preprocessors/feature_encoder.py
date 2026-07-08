@@ -52,7 +52,6 @@ class FeaturesEncoder(nn.Module):
         self,
         *,
         vae_ckpt_path: str = None,
-        synchformer_ckpt_path: str = None,
         mode: str = "16k"
     ):
         super(FeaturesEncoder, self).__init__()
@@ -71,7 +70,7 @@ class FeaturesEncoder(nn.Module):
         self.flan_t5_model = T5EncoderModel.from_pretrained("google/flan-t5-large")
         self.flan_t5_tokenizer = AutoTokenizer.from_pretrained("google/flan-t5-large")
 
-        # # Load VAE Model
+        # Load VAE Model
         self.mel_converter = get_mel_converter(mode=mode)
         self.vae = AudioAutoEncoder(vae_ckpt_path=vae_ckpt_path, mode=mode)
 

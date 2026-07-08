@@ -30,7 +30,6 @@ def setup_dataset(config: DictConfig, split: str):
         split=split,
         duration_sec=config.duration_sec,
         clip_fps=config.clip_fps,
-        sync_fps=config.sync_fps,
         clip_size=config.clip_size,
         sampling_rate=sr,
         normalize_audio=config.normalize_audio,
@@ -141,7 +140,6 @@ if __name__ == "__main__":
     # Load modules
     features_encoder = FeaturesEncoder(
         vae_ckpt_path=config.vae_ckpt_path,
-        synchformer_ckpt_path=config.synchformer_ckpt_path,
         mode=config.mode,
     ).eval().to(local_rank)
 
