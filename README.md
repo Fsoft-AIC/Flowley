@@ -1,21 +1,11 @@
-<div align="center">
+## Precise Video-to-Audio Generation with Cross-Modal Alignment in Latent Space
 
-<h2>Precise Video-to-Audio Generation with Cross-Modal Alignment in Latent Space</h2>
+[**<u>Thanh V. T. Tran</u**>1](https://thanhtvt.github.io/)     [**<u>Ngoc-Son Nguyen</u**>1](https://nngocson2002.github.io/)     [**<u>Luong Tran</u**>1](https://khanhluong34.github.io/)     [**<u>Long-Khanh Pham</u**>1](https://www.linkedin.com/in/long-khanh-pham-5094b923a/)     [**<u>Paarth Neekhara</u**>2](https://paarthneekhara.github.io/)     [**<u>Shehzeen Hussain</u>** 2](https://shehzeen.github.io/)     [**<u>Van Nguyen</u**>1](https://scholar.google.com/citations?user=rJe1704AAAAJ&hl=en)
 
-<a href="https://thanhtvt.github.io/"><strong><u>Thanh V. T. Tran</u></strong><sup>1</sup></a> &nbsp;&nbsp;&nbsp;
-<a href="https://nngocson2002.github.io/"><strong><u>Ngoc-Son Nguyen</u></strong><sup>1</sup></a> &nbsp;&nbsp;&nbsp;
-<a href="https://khanhluong34.github.io/"><strong><u>Luong Tran</u></strong><sup>1</sup></a> &nbsp;&nbsp;&nbsp;
-<a href="https://www.linkedin.com/in/long-khanh-pham-5094b923a/"><strong><u>Long-Khanh Pham</u></strong><sup>1</sup></a> &nbsp;&nbsp;&nbsp;
-<a href="https://paarthneekhara.github.io/"><strong><u>Paarth Neekhara</u></strong><sup>2</sup></a> &nbsp;&nbsp;&nbsp;
-<a href="https://shehzeen.github.io/"><strong><u>Shehzeen Hussain
-</u></strong><sup>2</sup></a> &nbsp;&nbsp;&nbsp;
-<a href="https://scholar.google.com/citations?user=rJe1704AAAAJ&hl=en"><strong><u>Van Nguyen</u></strong><sup>1</sup></a>
-
-<sup>1</sup> FPT Software AI Center, Vietnam &nbsp;&nbsp; <sup>2</sup> NVIDIA Corporation, USA
-
-</div>
+1 FPT Software AI Center, Vietnam    2 NVIDIA Corporation, USA
 
 ## Table of Contents
+
 - [Introduciton](#introduction)
 - [Installation](#installation)
 - [Training](#training)
@@ -36,31 +26,46 @@ Checkout our [project page](https://flowley-v2a.github.io/) for more generated s
 We have only tested this on Ubuntu 22.04 and PyTorch 2.0+
 
 #### 1. Install dependencies
+
 We use PyTorch 2.2 with CUDA 11.8. Please check if your GPUs/driver support this.
+
 ```shell
 cd Flowley
 conda env create -f environment.yml
 ```
 
 #### 2. Install project
+
 ```shell
 pip install -e .
 ```
 
 ## Training
+
 See [TRAINING.md](./docs/TRAINING.md)
 
 ## Inference
+
 See [INFERENCE.md](./docs/INFERENCE.md)
 
 ## Citation
+
 If our paper or codebase aids your research, please consider citing us:
+
 ```
-BibTex is coming soon...
+@article{tran2026precise,
+  author  = {Thanh V. T. Tran and Ngoc-Son Nguyen and Luong Tran and Long-Khanh Pham and Paarth Neekhara and Shezheen Hussain and Van Nguyen},
+  title   = {Precise Video-to-Audio Generation with Cross-Modal Alignment in Latent Space},
+  journal = {arXiv preprint arXiv:2607.06405},
+  year    = {2026},
+  url     = {https://arxiv.org/pdf/2607.06405}
+}
 ```
 
 ## Acknowledgement
+
 We would like to thank the authors for their great work.
+
 - [Make-An-Audio-2](https://github.com/bytedance/Make-An-Audio-2)
 - [MMAudio](https://github.com/hkchengrex/MMAudio)
 - [rectified-flow-pytorch](https://github.com/lucidrains/rectified-flow-pytorch)
