@@ -1,8 +1,19 @@
-## Precise Video-to-Audio Generation with Cross-Modal Alignment in Latent Space
+<div align="center">
 
-[**<u>Thanh V. T. Tran</u**>1](https://thanhtvt.github.io/)     [**<u>Ngoc-Son Nguyen</u**>1](https://nngocson2002.github.io/)     [**<u>Luong Tran</u**>1](https://khanhluong34.github.io/)     [**<u>Long-Khanh Pham</u**>1](https://www.linkedin.com/in/long-khanh-pham-5094b923a/)     [**<u>Paarth Neekhara</u**>2](https://paarthneekhara.github.io/)     [**<u>Shehzeen Hussain</u>** 2](https://shehzeen.github.io/)     [**<u>Van Nguyen</u**>1](https://scholar.google.com/citations?user=rJe1704AAAAJ&hl=en)
+<h2>Precise Video-to-Audio Generation with Cross-Modal Alignment in Latent Space</h2>
 
-1 FPT Software AI Center, Vietnam    2 NVIDIA Corporation, USA
+<a href="https://thanhtvt.github.io/"><strong><u>Thanh V. T. Tran</u></strong><sup>1</sup></a> &nbsp;&nbsp;&nbsp;
+<a href="https://nngocson2002.github.io/"><strong><u>Ngoc-Son Nguyen</u></strong><sup>1</sup></a> &nbsp;&nbsp;&nbsp;
+<a href="https://khanhluong34.github.io/"><strong><u>Luong Tran</u></strong><sup>1</sup></a> &nbsp;&nbsp;&nbsp;
+<a href="https://www.linkedin.com/in/long-khanh-pham-5094b923a/"><strong><u>Long-Khanh Pham</u></strong><sup>1</sup></a> &nbsp;&nbsp;&nbsp;
+<a href="https://paarthneekhara.github.io/"><strong><u>Paarth Neekhara</u></strong><sup>2</sup></a> &nbsp;&nbsp;&nbsp;
+<a href="https://shehzeen.github.io/"><strong><u>Shehzeen Hussain
+</u></strong><sup>2</sup></a> &nbsp;&nbsp;&nbsp;
+<a href="https://scholar.google.com/citations?user=rJe1704AAAAJ&hl=en"><strong><u>Van Nguyen</u></strong><sup>1</sup></a>
+
+<sup>1</sup> FPT Software AI Center, Vietnam &nbsp;&nbsp; <sup>2</sup> NVIDIA Corporation, USA
+
+</div>
 
 ## Table of Contents
 
